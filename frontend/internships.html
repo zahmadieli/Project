@@ -1,11 +1,15 @@
 <html>
 <head>
-  <title>Internships</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Internship Search</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
 </head>
 <body>
-  <h1>Internship Listings</h1>
-  <div id="internshipList"></div>
-  <script src="script.js"></script>
+  <h1>Search Internships</h1>
+
+  <input type="text" id="queryInput" placeholder="Search internships">
+  <button onclick="searchInternships(document.getElementById('queryInput').value)">Search</button>
+
+  <div id="internshipResults"></div>
 </body>
 </html>

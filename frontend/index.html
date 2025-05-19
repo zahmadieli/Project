@@ -1,14 +1,16 @@
 <html>
 <head>
   <title>Internship Finder</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js" defer></script>
 </head>
 <body>
   <h1>Internship Finder</h1>
-  <input type="text" id="search" placeholder="Search internships by keyword...">
-  <button onclick="searchInternships()">Search</button>
-  <div id="results"></div>
+
   <button onclick="saveTestBookmark()">Save Test Bookmark</button>
-  <script src="script.js"></script>
+
+  <h2>Saved Bookmarks</h2>
+  <div id="bookmarksList"></div>
+  <button onclick="loadBookmarks()">Load Bookmarks</button>
 </body>
 </html>
