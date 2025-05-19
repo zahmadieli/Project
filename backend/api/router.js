@@ -36,5 +36,4 @@ router.post('/bookmark', async (req, res) => {
   console.log("Inserted successfully:", data);
   res.json(data);
 });
-
 module.exports = router;
