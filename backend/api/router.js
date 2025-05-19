@@ -26,7 +26,8 @@ router.post('/bookmark', async (req, res) => {
 
   const { data, error } = await supabase
     .from('bookmarks')
-    .insert([{ title, company }]).select();
+    .insert([{ title, company }])
+    .select();
      
 
   if (error) {

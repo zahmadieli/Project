@@ -5,10 +5,24 @@
   <script src="script.js" defer></script>
 </head>
 <body>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="internships.html">Internships</a>
+    <a href="help.html">Help</a>
+    <a href="about.html">About</a>
+    <h2>Search Internships</h2>
+    <input type="text" id="searchMajor" placeholder="Major (e.g. data, marketing)">
+    <input type="text" id="searchLocation" placeholder="Location (e.g. DC, remote)">
+    <button onclick="searchInternships()">Search</button>
+    <div id="homeResults"></div>
+
+  </nav>
+  
   <h1>Internship Finder</h1>
   <button onclick="saveTestBookmark()">Save Test Bookmark</button>
   <h2>Saved Bookmarks</h2>
-  <div id="bookmarksList"></div>
+  
   <button onclick="loadBookmarks()">Load Bookmarks</button>
+  <div id="bookmarksList"></div>
 </body>
 </html>
