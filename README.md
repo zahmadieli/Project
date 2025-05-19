@@ -20,7 +20,7 @@ A web application to help college students find, save, and organize internship o
 - iOS Safari
 
 ## Project Structure
-
+```json
 finalProject_INST377/
 ├── frontend/
 │ ├── index.html
@@ -36,7 +36,7 @@ finalProject_INST377/
 │ │ └── supabaseuser.js
 │ ├── package.json
 └── README.md
-
+```
 # Developer Manual
 
 This section is for developers
