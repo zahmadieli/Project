@@ -16,15 +16,22 @@ async function saveTestBookmark() {
 
 
 async function loadBookmarks() {
-  const response = await fetch(`${backendBase}/api/bookmarks`);
-  const bookmarks = await response.json();
-  const container = document.getElementById('bookmarksList');
-  container.innerHTML = '';
-  bookmarks.forEach(bookmark => {
-    const item = document.createElement('div');
-    item.innerHTML = `<strong>${bookmark.title}</strong> at ${bookmark.company}`;
-    container.appendChild(item);
-  });
+  try {
+    const response = await fetch('https://internship-backend-8az2.onrender.com/api/bookmarks');
+    const bookmarks = await response.json();
+    console.log("Loaded bookmarks:", bookmarks);
+
+    const container = document.getElementById('bookmarksList');
+    container.innerHTML = '';
+
+    bookmarks.forEach(bookmark => {
+      const item = document.createElement('div');
+      item.innerHTML = `<strong>${bookmark.title}</strong> at ${bookmark.company}`;
+      container.appendChild(item);
+    });
+  } catch (error) {
+    console.error("Failed to load bookmarks:", error);
+  }
 }
 
 async function searchInternships(query) {
